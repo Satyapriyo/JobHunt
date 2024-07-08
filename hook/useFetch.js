@@ -6,5 +6,6 @@ const useFetch = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
 
+    
 }
 export default useFetch
