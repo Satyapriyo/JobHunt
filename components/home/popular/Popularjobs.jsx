@@ -11,10 +11,15 @@ import styles from "./popularjobs.style";
 import { COLORS, SIZES } from "../../../constants";
 import PolularJobCards from "../../common/cards/popular/PopularJobCard";
 import { ColorSpace } from "react-native-reanimated";
+import useFetch from "../../../hook/useFetch";
+
 const Popularjobs = () => {
-  const error = false;
   const router = useRouter();
-  const isLoading = false;
+  const { data, isLoading, error } = useFetch("search", {
+    query: "React Developer",
+    num_pages: 1,
+  });
+  // console.log(data);
   return (
     <View style={styles.container}>
       <View style={styles.header}>
