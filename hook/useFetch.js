@@ -51,7 +51,7 @@ const useFetch = (endpoint, query) => {
 }
 
 
-
+export default useFetch
 // query: 'Node.js developer in New-York,USA',
 // page: '1',
 // num_pages: '1',
