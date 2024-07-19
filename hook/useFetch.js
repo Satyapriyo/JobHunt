@@ -23,7 +23,7 @@ const useFetch = (endpoint, query) => {
     };
     const fetchData = async () => {
 
-        isLoading(true)
+        setIsLoading(true)
         try {
             const response = await axios.request(options);
             setData(response.data.data)
@@ -41,7 +41,6 @@ const useFetch = (endpoint, query) => {
     }
     useEffect(() => {
         fetchData();
-
     }, [])
     const refetch = () => {
         setIsLoading(true);
@@ -51,7 +50,7 @@ const useFetch = (endpoint, query) => {
 }
 
 
-export default useFetch
+export default useFetch;
 // query: 'Node.js developer in New-York,USA',
 // page: '1',
 // num_pages: '1',
